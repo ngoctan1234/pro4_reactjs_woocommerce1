@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.footer{
+    text-align: center;
+    height: 100px;
+    padding: 30px;
+    background: #2c3e50;
+    color:#fff;
+}
+.header{
+    background-color: #3498db;
+    color:#fff;
+    padding: 50px;
+}
+.products{
+    min-height: 50vh;
+}
+.navbar-brand{
+    color:#fff !important;
+}
+.nav-link{
+    color:#fff !important;
+}
+.product-item.active{
+    border:2px solid green;
+    /* position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 100vh;
+    background: red; */
+}
