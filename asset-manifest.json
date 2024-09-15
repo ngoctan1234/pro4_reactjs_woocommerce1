@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pro4_reactjs_woocommerce1/static/css/main.c0c8d98d.css",
+    "main.js": "/pro4_reactjs_woocommerce1/static/js/main.9a04cf01.js",
+    "index.html": "/pro4_reactjs_woocommerce1/index.html",
+    "main.c0c8d98d.css.map": "/pro4_reactjs_woocommerce1/static/css/main.c0c8d98d.css.map",
+    "main.9a04cf01.js.map": "/pro4_reactjs_woocommerce1/static/js/main.9a04cf01.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c0c8d98d.css",
+    "static/js/main.9a04cf01.js"
+  ]
+}
