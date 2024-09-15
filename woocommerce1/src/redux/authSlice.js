@@ -4,7 +4,7 @@ import axios from 'axios';
 import axiosInstance from '../utils/axiosInstance';
 
 // Thay đổi URL và cấu hình phù hợp với API của bạn
-const API_URL = 'http://localhost:8080/api';
+const API_URL = process.env.REACT_APP_API_URL;
 
 export const login = createAsyncThunk('auth/login', async ({ username, password }, thunkAPI) => {
   try {

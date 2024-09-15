@@ -4,6 +4,7 @@ import { getAllProductDetail, uploadImage } from "../../redux/productSlice";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from 'axios';
+import axiosInstance from "../../utils/axiosInstance";
 
 export default function CProductDetail() {
     const { id } = useParams();
@@ -28,10 +29,7 @@ export default function CProductDetail() {
     const fetchImage = async (imageUrl) => {
         const token = localStorage.getItem("accessToken"); // Lấy token của bạn từ Redux store hoặc localStorage
         try {
-            const response = await axios.get(`http://localhost:8080/api/products/images/${imageUrl}`, {
-                headers: {
-                    'Authorization': `Bearer ${token}`
-                },
+            const response = await axiosInstance.get(`/products/images/${imageUrl}`, {
                 responseType: 'blob' // Đảm bảo phản hồi trả về là Blob
             });
             const imageObjectURL = URL.createObjectURL(response.data);

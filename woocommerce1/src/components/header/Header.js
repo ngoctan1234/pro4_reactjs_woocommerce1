@@ -45,6 +45,9 @@ function Header() {
                             <Link className="nav-link" to="/admin">Admin</Link>
                         </NavItem>
                         <NavItem>
+                            <Link className="nav-link" to="/validation">Validation</Link>
+                        </NavItem>
+                        <NavItem>
                             <NavLink  >
                                 Contact
                             </NavLink>

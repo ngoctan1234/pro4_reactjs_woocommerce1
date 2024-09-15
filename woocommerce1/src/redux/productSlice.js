@@ -4,13 +4,17 @@ import axios from 'axios';
 import axiosInstance from '../utils/axiosInstance';
 
 // Thay đổi URL và cấu hình phù hợp với API của bạn
-const API_URL = 'http://localhost:8080/api';
+const API_URL = process.env.REACT_APP_API_URL;
 
 
 export const uploadImage= createAsyncThunk('pro/uploadImage', async ({id,formData},thunkAPI) => {
-  const url= `http://localhost:8080/api/products/uploads/${id}`;
+  const url= API_URL+`/products/uploads/${id}`;
   try {
-    const response = await axiosInstance.post(url, formData);
+    const response = await axiosInstance.post(url, formData,{
+      headers: {
+        'Content-Type': 'multipart/form-data' // Đặt Content-Type cho yêu cầu upload
+      }
+    });
     return response.data; // Trả về dữ liệu từ phản hồi
   } catch (error) {
     return thunkAPI.rejectWithValue(error.response.data); // Trả về lỗi nếu có
